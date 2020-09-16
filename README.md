@@ -7,7 +7,7 @@ This package is used to integrate sabpaisa payment gateway with your react nativ
 You can add SabPaisa SDK to your existing React Native project using following npm command: -
 
 ```sh
-npm install react-native-sabpaisa
+npm install react-native-sabpaisa --save
 ```
 
 ## Example

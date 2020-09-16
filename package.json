@@ -1,6 +1,6 @@
 {
   "name": "react-native-sabpaisa",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "This package is used to integrate sabpaisa payment gateway with your react native application.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -32,7 +32,8 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "sabpaisa"
   ],
   "repository": "https://github.com/GitHub-Sabpaisa/react-native-sabpaisa",
   "author": "Yash Tripathi <app@sabpaisa.in> (https://sabpaisa.in/)",
