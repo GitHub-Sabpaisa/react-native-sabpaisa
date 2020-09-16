@@ -8,7 +8,6 @@ export default class App extends Component {
 
   constructor(props) {
     super(props);
-    // navigation = this.props.navigation
     this.state = {
       url: '',
       pgDetails: {
