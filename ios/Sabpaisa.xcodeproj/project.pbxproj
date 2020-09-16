@@ -7,33 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-
-		F4FF95D7245B92E800C19C63 /*  Sabpaisa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  Sabpaisa.swift */; };
-
-		5E555C0D2413F4C50049A1A2 /* Sabpaisa.mm in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* Sabpaisa.mm */; };
+		057DE574E360816E062EF754 /* Pods_Sabpaisa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FC7975B0CF159A32F390EB /* Pods_Sabpaisa.framework */; };
+		F4FF95D7245B92E800C19C63 /* Sabpaisa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* Sabpaisa.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		58B511D91A9E6C8500147676 /* CopyFiles */ = {
+		58B511D91A9E6C8500147676 /* Copy Files (1 item) */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
+			dstSubfolderSpec = 10;
 			files = (
 			);
+			name = "Copy Files (1 item)";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libSabpaisa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSabpaisa.a; sourceTree = BUILT_PRODUCTS_DIR; };
-
-
+		6E2A4E37E24E1C8B3119D5C5 /* Pods-Sabpaisa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sabpaisa.release.xcconfig"; path = "Target Support Files/Pods-Sabpaisa/Pods-Sabpaisa.release.xcconfig"; sourceTree = "<group>"; };
+		72FC7975B0CF159A32F390EB /* Pods_Sabpaisa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sabpaisa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		742A84563FF4523E0E05340C /* Pods-Sabpaisa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sabpaisa.debug.xcconfig"; path = "Target Support Files/Pods-Sabpaisa/Pods-Sabpaisa.debug.xcconfig"; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* Sabpaisa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sabpaisa.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* Sabpaisa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sabpaisa-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* Sabpaisa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sabpaisa.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057DE574E360816E062EF754 /* Pods_Sabpaisa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,14 +57,30 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-
-
 				F4FF95D6245B92E800C19C63 /* Sabpaisa.swift */,
 				B3E7B5891CC2AC0600A0062D /* Sabpaisa.m */,
 				F4FF95D5245B92E700C19C63 /* Sabpaisa-Bridging-Header.h */,
-
 				134814211AA4EA7D00B7C361 /* Products */,
+				D62AC97D38DA5A857543D908 /* Pods */,
+				C7CDDE699CC4C02BF692A6E1 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		C7CDDE699CC4C02BF692A6E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72FC7975B0CF159A32F390EB /* Pods_Sabpaisa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D62AC97D38DA5A857543D908 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				742A84563FF4523E0E05340C /* Pods-Sabpaisa.debug.xcconfig */,
+				6E2A4E37E24E1C8B3119D5C5 /* Pods-Sabpaisa.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -75,9 +90,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "Sabpaisa" */;
 			buildPhases = (
+				CCA5B4052C3C2841F1C5E967 /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
-				58B511D91A9E6C8500147676 /* CopyFiles */,
+				58B511D91A9E6C8500147676 /* Copy Files (1 item) */,
 			);
 			buildRules = (
 			);
@@ -120,16 +136,37 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CCA5B4052C3C2841F1C5E967 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sabpaisa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-
 				F4FF95D7245B92E800C19C63 /* Sabpaisa.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* Sabpaisa.m in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,8 +268,19 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 742A84563FF4523E0E05340C /* Pods-Sabpaisa.debug.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(BUILD_PRODUCTS_DIR)/CryptoSwift",
+					"$(inherited)",
+				);
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
@@ -242,18 +290,27 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Sabpaisa;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "Sabpaisa-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Debug;
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E2A4E37E24E1C8B3119D5C5 /* Pods-Sabpaisa.release.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(BUILD_PRODUCTS_DIR)/CryptoSwift",
+					"$(inherited)",
+				);
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
@@ -263,10 +320,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Sabpaisa;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "Sabpaisa-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Release;
 		};

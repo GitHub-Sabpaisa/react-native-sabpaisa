@@ -1,0 +1,6 @@
+framework module Pods_Sabpaisa {
+  umbrella header "Pods-Sabpaisa-umbrella.h"
+
+  export *
+  module * { export * }
+}
