@@ -29,11 +29,11 @@ export default class App extends Component {
       url: '',
       pgDetails: {
         // these all are mandatory params for the payment gateway
-        username: 'bhabesh.jha_2211', // your username
-        password: 'DEMO1_SP2211', // your password
-        clientCode: 'DEMO1', // your client code
-        authKey: 'nqwPqlvl1N712ZWj', // your auth key
-        authIV: 'Is8W6uq1cWz980iO', // your auth vi
+        username: '', // your username
+        password: '', // your password
+        clientCode: '', // your client code
+        authKey: '', // your auth key
+        authIV: '', // your auth vi
         URLsuccess: 'https://sabpaisa.in/',
         URLfailure: 'https://sabpaisa.in/',
         spHitUrl: 'https://securepay.sabpaisa.in/SabPaisa/sabPaisaInit',
@@ -88,21 +88,6 @@ export default class App extends Component {
       });
     }
   };
-
-  getParams = (url) => {
-    var params = {};
-    // var parser = document.createElement('a');
-    // parser.href = url;
-    // var query = parser.search.substring(1);
-    var vars = toString(url).split('&');
-    for (var i = 0; i < vars.length; i++) {
-      var pair = vars[i].split('=');
-      params[pair[0]] = decodeURIComponent(pair[1]);
-    }
-    console.log('params');
-    console.log(params);
-    return params;
-  };
 }
 
 const styles = StyleSheet.create({
@@ -114,6 +99,79 @@ const styles = StyleSheet.create({
   },
 });
 ```
+## Show Transaction Summary
+
+```sh
+import React, { Component } from 'react';
+import { Text, View, Button } from 'react-native';
+
+export default class ShowTransactionSummary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      responseString: '',
+      responseObject: {},
+    };
+  }
+  componentDidMount() {
+    this.setState({ responseString: this.props.route.params.details });
+    console.log('from show transaction');
+    console.log(this.state.responseString);
+
+    var params = {};
+    var vars = this.props.route.params.details.toString().split('&');
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split('=');
+      params[pair[0]] = decodeURIComponent(pair[1]);
+    }
+    console.log(params);
+    this.setState({ responseObject: params });
+  }
+  render() {
+    return (
+      <>
+        <View style={{ flex: 1 }}>
+          <Text
+            style={{ fontSize: 20, fontWeight: 'bold', alignSelf: 'center' }}
+          >
+            {' '}
+            Transaction Summary{' '}
+          </Text>
+          {Object.keys(this.state.responseObject).length === 0 ? (
+            <Text>Response array is empty</Text>
+          ) : (
+            <View style={{ flex: 1, marginHorizontal: 20, marginVertical: 20 }}>
+              <Text>PGTxnNo : {this.state.responseObject.PGTxnNo}</Text>
+              <Text>
+                SabPaisaTxId : {this.state.responseObject.SabPaisaTxId}
+              </Text>
+              <Text>amount : {this.state.responseObject.amount}</Text>
+              <Text>
+                orgTxnAmount : {this.state.responseObject.orgTxnAmount}
+              </Text>
+              <Text>reMsg : {this.state.responseObject.reMsg}</Text>
+              <Text>clientTxnId : {this.state.responseObject.clientTxnId}</Text>
+
+              <Text style={{ marginTop: 20 }}>
+                COMPLETE RESPONSE STRING : {this.state.responseString}
+              </Text>
+            </View>
+          )}
+        </View>
+        <View style={{ flex: 1, marginTop: 150, marginHorizontal: 20 }}>
+          <Button
+            title="Try Another Transaction"
+            onPress={() => {
+              this.props.navigation.replace('Home');
+            }}
+          />
+        </View>
+      </>
+    );
+  }
+}
+```
+
 
 ## Example Code
 
